@@ -1,36 +1,39 @@
-<div class="container">
-    <div class="left-section">
-      <div class="logo">
-        <!-- <img src="assets/adobe-logo.png" alt="Adobe Logo" /> -->
-        <h2>Adobe</h2>
-        <p>Sign in or create an account</p>
-      </div>
+<div class="container" >
+  <div class="left-section">
+    <div class="logo">
+      <!-- <img src="assets/adobe-logo.png" alt="Adobe Logo" /> -->
+      <h2 style="color: black;">Secure Payment</h2>
+      <p style="color: black;">Sign in or create an account</p>
     </div>
-    <div class="right-section">
-      <div class="signin-box">
-        <h2>Sign in</h2>
-        <p>New user? <a href="#">Create an account</a></p>
-  
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <label class="mb-1"><h6 class="mb-0 text-sm login-label">Email  <span class="star">*</span></h6></label>
-            <input formControlName="email" class="form-control form-control-lg form-control-solid" type="text" placeholder="Enter Email" [ngClass]="{ 'is-invalid': submitted }">
-            <!-- <div class="valid-msg" *ngIf="(f['email'].invalid && f['email'].touched ) || f['email'].dirty || submitted">
+  </div>
+  <div class="right-section" style="--background: rgba(0, 0, 0, 0.8);">
+    <div class="signin-box" style="--background: rgba(255, 255, 255, 0.2);
+  --backdrop-filter: blur(10px);">
+      <h2>Sign in</h2>
+      <p>New user? <a href="#">Create an account</a></p>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label class="mb-1">
+          <h6 class="mb-0 login-label ">Email Address<span class="star">*</span></h6>
+        </label>
+        <input formControlName="email" class="form-control form-control-lg form-control-solid" type="text"
+          placeholder="Enter Email" [ngClass]="{ 'is-invalid': submitted }">
+        <!-- <div class="valid-msg" *ngIf="(f['email'].invalid && f['email'].touched ) || f['email'].dirty || submitted">
                 <span *ngIf="f['email'].errors?['required']" class="text-danger">Please enter email</span>
                 <span *ngIf="f['email'].errors?['required']" class="text-danger">Please enter valid email</span>
             </div> -->
-          <button type="submit">Continue</button>
-        </form>
-  
-        <div class="divider">
-          <span>Or</span>
-        </div>
-  
-        <button class="google-btn">Continue with Google</button>
-        <button class="facebook-btn">Continue with Facebook</button>
-        <button class="apple-btn">Continue with Apple</button>
-  
-        <a href="#" class="help-link">Get help signing in</a>
+        <button class="continue-button" type="submit">Continue</button>
+      </form>
+
+      <div class="divider">
+        <span>Or</span>
       </div>
+
+      <button class="google-btn">Continue with Google</button>
+      <button class="facebook-btn">Continue with Facebook</button>
+      <button class="apple-btn">Continue with Apple</button>
+
+      <a href="#" class="help-link">Get help signing in</a>
     </div>
   </div>
-  
+</div>
