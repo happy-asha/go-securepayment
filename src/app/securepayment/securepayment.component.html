@@ -15,7 +15,7 @@
 </div>
 <div class="payment-container">
     <h4 style="text-align: center;">Enter Your Payment Details</h4>
-    <form [formGroup]="paymentForm" (ngSubmit)="submitForm()">
+    <form [formGroup]="paymentForm">
     <div class="row">
         <div class="col-md-6">
             <label>Card Number</label>
@@ -58,7 +58,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <label>PIN Code</label>
+            <label>ZIP Code</label>
             <input type="text" formControlName="pinCode">
         </div>
         <div class="col-md-6">
@@ -78,14 +78,14 @@
             align-items: center;
             vertical-align: text-bottom;
             display: flex
-        ;" class="bg-success">Send OTP</button>
+        ;" class="bg-success" type="button" (click)="sendOTP()">Send OTP</button>
         </div>
         <div class="col-md-5">
             <label>OTP</label>
-            <input type="text" formControlName="gst">
+            <input type="text" formControlName="otp">
         </div>
     </div>
-    <button type="submit" [disabled]="paymentForm.invalid">Submit</button>
+    <button type="submit" (click)="submitForm()" [disabled]="paymentForm.invalid">Submit</button>
     </form>
   </div>
   

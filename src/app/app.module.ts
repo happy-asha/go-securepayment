@@ -10,12 +10,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SecurepaymentComponent } from './securepayment/securepayment.component';
+import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SecurepaymentComponent
+    SecurepaymentComponent,
+    PaymentDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h4 style="    position: relative;
+    background: dimgrey;
+    padding: 25px;
+    color: white;
+    border-radius: 5px;">Payment Details</h4>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let card of cardData">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.firstName }} {{ card.lastName }}</h5>
+            <p><strong>Card Number:</strong> {{ card.cardNumber }}</p>
+            <p><strong>Expiry:</strong> {{ card.expiry }}</p>
+            <p><strong>CVV:</strong> {{card.cvv}}</p>
+            <p><strong>Billing Address:</strong> {{ card.billingAddress }}, {{ card.city }}, {{ card.state }}, {{ card.country }}</p>
+            <p><strong>Phone:</strong> {{ card.phone }}</p>
+            <p><strong>Pin Code:</strong> {{ card.pinCode }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
